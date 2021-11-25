@@ -1,5 +1,6 @@
 package bomberman;
 
+
 import java.awt.Graphics;
 
 public abstract  class juegoObjects {
