@@ -23,7 +23,7 @@ public class Marciano extends ElementoBasico {
 	}
 
 	private static File getResource() {
-		return new File("file:///C:/Users/anala/Desktop/JUEGO/src/main/resources/imagenes/NAVE.png.png");
+		return new File("/home/hp/eclipse-workspace/JuegoSpacefrog/src/main/resourcess/imagenes/NAVE.png.png");
 	}
 
 	public void dibujar(Graphics graphics) {
