@@ -10,7 +10,7 @@ public class Personaje {
 
 	Juego miJuego;
 
-	static boolean saltando = false;
+	static boolean moverse = false;
 	boolean sube = false;
 	boolean baja = false;
 
@@ -33,13 +33,13 @@ public class Personaje {
 		if (inicialX + auxiliarX > 0 && inicialX + auxiliarX < miJuego.getWidth() - anchoPersonaje) {
 			inicialX += auxiliarX;
 		}
-		if (saltando) {
+		if (moverse) {
 			if (inicialY == 270) {
 				sube = true;
 				auxiliarY = -2;
 				baja = false;
 			}
-			if (inicialY == 150) {
+			if (inicialY == 10) {
 				baja = true;
 				auxiliarY = 2;
 				sube = false;
@@ -51,7 +51,8 @@ public class Personaje {
 			if (baja) {
 				inicialY += auxiliarY;
 				if (inicialY == 270) {
-					saltando = false;
+					moverse = false;
+				
 				}
 			}
 		}
@@ -64,7 +65,7 @@ public class Personaje {
 
 	public void keyPressed(KeyEvent e) {
 		if (e.getKeyCode() == KeyEvent.VK_UP) {
-			saltando = true;
+			moverse = true;
 		}
 	}
 

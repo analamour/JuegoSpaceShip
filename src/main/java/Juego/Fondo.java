@@ -3,6 +3,7 @@ package Juego;
 import java.awt.Graphics2D;
 import javax.swing.ImageIcon;
 
+
 public class Fondo {
 
 	Juego miJuego;

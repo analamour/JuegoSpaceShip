@@ -14,11 +14,12 @@ public class Inicializador {
 	public static int reiniciaJuego = -1;
 
 	public static void main(String[] args) {
-		String nombresonido = "/dontLetThemCatchYou-main/src/main/resources/sonidos/FondoMusica.wav";
+
+		String nombresonido = ("/dontLetThemCatchYou-main/src/main/resources/sonidos/FondoMusica.wav");
 		ReproducirSonido(nombresonido);
 		JOptionPane.showMessageDialog(null, "Comenzar a Jugar");
 		System.setProperty("sun.java2d.opengl", "true");
-		JFrame ventana = new JFrame("Don't let them catch you");
+		JFrame ventana = new JFrame("SpaceFrogger");
 		Juego miJuego = new Juego();
 		ventana.add(miJuego);
 		ventana.setSize(1300, 400);
@@ -28,9 +29,10 @@ public class Inicializador {
 		ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 		while (true) {
-			if (Juego.juegoFinalizado) {	
-				reiniciaJuego = JOptionPane.showConfirmDialog(null, "Perdiste! ¿Volver a jugar?", "¡ Game Over !", JOptionPane.YES_NO_OPTION);
-				if (reiniciaJuego == 0) {	
+			if (Juego.juegoFinalizado) {
+				reiniciaJuego = JOptionPane.showConfirmDialog(null, "Perdiste! ¿Volver a jugar?", "¡ Partida Perdida !",
+						JOptionPane.YES_NO_OPTION);
+				if (reiniciaJuego == 0) {
 					reiniciaValores();
 				} else if (reiniciaJuego == 1) {
 					System.exit(0);
@@ -44,11 +46,11 @@ public class Inicializador {
 				}
 
 				if (Juego.pierdeIntentoVida == true) {
-					JOptionPane.showMessageDialog(null, "Cuidado!! Te quedan: " + Juego.intentosVidas + " intentos");
+					JOptionPane.showMessageDialog(null, "Te quedan: " + Juego.intentosVidas + " intentos");
 					Juego.pierdeIntentoVida = false;
 					Juego.intentosVidas--;
 					Personaje.inicialY = 270;
-					Personaje.saltando = false;
+					Personaje.moverse = false;
 					Enemigo.inicialX = 1300;
 				}
 			}
@@ -65,13 +67,14 @@ public class Inicializador {
 		Enemigo.inicialX = 1300;
 	}
 
-	public static void ReproducirSonido(String nombreSonido){
+	public static void ReproducirSonido(String nombresonido) {
 		try {
-			AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File(nombreSonido).getAbsoluteFile());
+			AudioInputStream audioInputStream = AudioSystem
+					.getAudioInputStream(new File(nombresonido).getAbsoluteFile());
 			Clip clip = AudioSystem.getClip();
 			clip.open(audioInputStream);
 			clip.loop(reiniciaJuego);
-		} catch(UnsupportedAudioFileException | IOException | LineUnavailableException ex) {
+		} catch (UnsupportedAudioFileException | IOException | LineUnavailableException ex) {
 			System.out.println("Error al reproducir el sonido.");
 		}
 	}

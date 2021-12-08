@@ -88,7 +88,7 @@ public class Juego extends JPanel {
 
 		if (juegoFinalizado) {
 			g2D.setColor(Color.BLACK);
-			g2D.drawString("Gracias D10S !", ((float) getBounds().getCenterX() / 2) + 210, 70);
+			g2D.drawString("Gracias", ((float) getBounds().getCenterX() / 2) + 210, 70);
 		}
 	}
 
