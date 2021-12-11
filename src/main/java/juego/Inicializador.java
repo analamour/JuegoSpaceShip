@@ -17,7 +17,7 @@ public class Inicializador {
 
 	public static void main(String[] args) {
 
-		String nombresonido = ("C:\\Users\\anala\\JuegoSpacefrog\\src\\main\\resources\\sonido\\FondoMusica.wav");
+		String nombresonido = ("C:\\Users\\anala\\Documents\\JuegoSpacefrog\\src\\main\\resources\\sonido\\FondoMusica.wav");
 		ReproducirSonido(nombresonido);
 		JOptionPane.showMessageDialog(null, "Comenzar a Jugar");
 		System.setProperty("sun.java2d.opengl", "true");

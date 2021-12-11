@@ -12,6 +12,7 @@ public class Personaje {
 	Juego miJuego;
 
 	static boolean moverse = false;
+	static boolean disparo= false;
 	boolean sube = false;
 	boolean baja = false;
 
@@ -67,6 +68,11 @@ public class Personaje {
 	public void keyPressed(KeyEvent e) {
 		if (e.getKeyCode() == KeyEvent.VK_UP) {
 			moverse = true;
+		}
+	}
+	public void keyPressed1(KeyEvent e) {
+		if (e.getKeyCode() == KeyEvent.VK_SPACE) {
+			disparo = true;
 		}
 	}
 

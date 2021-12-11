@@ -10,20 +10,15 @@ import javax.swing.ImageIcon;
 
 
 public class Enemigo {
-	private static final String Enemigos = null;
+	//private static final String Enemigos = null;
 
 	Juego miJuego;
-
 	Area cuerpo;
-
 	int anchoEnemigo = 70;
 	int altoEnemigo = 70;
-
 	static int inicialX = 1300;
 	static int inicialY = 270;
-
 	static int auxiliarX = -4;
-
 	public Enemigo(Juego miJuego) {
 		this.miJuego = miJuego;
 	}
