@@ -76,4 +76,7 @@ public class Personaje {
 
 		return cuerpo;
 	}
+	public void disparoLaser () {
+		
+	}
 }

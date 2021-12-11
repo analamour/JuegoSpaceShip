@@ -17,11 +17,11 @@ public class Inicializador {
 
 	public static void main(String[] args) {
 
-		String nombresonido = ("/dontLetThemCatchYou-main/src/main/resources/sonidos/FondoMusica.wav");
+		String nombresonido = ("C:\\Users\\anala\\JuegoSpacefrog\\src\\main\\resources\\sonido\\FondoMusica.wav");
 		ReproducirSonido(nombresonido);
 		JOptionPane.showMessageDialog(null, "Comenzar a Jugar");
 		System.setProperty("sun.java2d.opengl", "true");
-		JFrame ventana = new JFrame("SpaceFrogger");
+		JFrame ventana = new JFrame("SpaceShip");
 		Juego miJuego = new Juego();
 		ventana.add(miJuego);
 		ventana.setSize(1300, 400);
