@@ -1,8 +1,7 @@
-package Juego;
+package juego;
 
 import java.awt.Graphics2D;
 import javax.swing.ImageIcon;
-
 
 public class Fondo {
 

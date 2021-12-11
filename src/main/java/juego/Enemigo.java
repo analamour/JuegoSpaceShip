@@ -1,11 +1,17 @@
-package Juego;
+package juego;
 
 import java.awt.Graphics2D;
 import java.awt.Rectangle;
 import java.awt.geom.Area;
+import java.util.ArrayList;
+
 import javax.swing.ImageIcon;
 
+
+
 public class Enemigo {
+	private static final String Enemigos = null;
+
 	Juego miJuego;
 
 	Area cuerpo;
@@ -60,5 +66,10 @@ public class Enemigo {
 		areaInt.intersect(getBounds());
 
 		return !areaInt.isEmpty();
+	}
+
+	public int getCoordX() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 }

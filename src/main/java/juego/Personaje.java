@@ -1,10 +1,11 @@
-package Juego;
+package juego;
 
 import java.awt.Graphics2D;
 import java.awt.event.KeyEvent;
 import java.awt.geom.Area;
 import java.awt.geom.Ellipse2D;
 import javax.swing.ImageIcon;
+
 
 public class Personaje {
 
