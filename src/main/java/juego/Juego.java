@@ -43,15 +43,13 @@ public class Juego extends JPanel {
 
 			@Override
 			public void keyPressed(KeyEvent e) {
-				if (e.getKeyCode() == KeyEvent.VK_UP) {
 					sonidoSalto.play();
 					personaje.keyPressed(e);
 				}
-			}
 
 			@Override
 			public void keyReleased(KeyEvent e) {
-
+					sonidoSalto.play();
 			}
 		});
 		setFocusable(true);

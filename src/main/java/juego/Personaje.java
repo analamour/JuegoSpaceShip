@@ -39,11 +39,13 @@ public class Personaje {
 			if (inicialY == 270) {
 				sube = true;
 				auxiliarY = -2;
+				inicialX = 50;
 				baja = false;
 			}
 			if (inicialY == 10) {
 				baja = true;
 				auxiliarY = 2;
+				auxiliarX = 0;
 				sube = false;
 			}
 
@@ -52,22 +54,24 @@ public class Personaje {
 			}
 			if (baja) {
 				inicialY += auxiliarY;
-				if (inicialY == 270) {
-					moverse = false;
-				
-				}
+
 			}
 		}
 	}
+
 
 	public void paint(Graphics2D g) {
 		ImageIcon personaje = new ImageIcon(this.getClass().getResource("/imagenes/nave.png"));
 		g.drawImage(personaje.getImage(), inicialX, inicialY, anchoPersonaje, altoPersonaje, null);
 	}
-
+	
 	public void keyPressed(KeyEvent e) {
 		if (e.getKeyCode() == KeyEvent.VK_UP) {
+			auxiliarY = -2;
 			moverse = true;
+		}
+		if (e.getKeyCode() == KeyEvent.VK_DOWN) {
+			auxiliarY = 2;
 		}
 	}
 	public void keyPressed1(KeyEvent e) {
