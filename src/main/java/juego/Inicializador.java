@@ -72,17 +72,17 @@ public class Inicializador {
 		Enemigo.inicialX = 1300;
 	}
 
-	public static void ReproducirSonido(String nombresonido) {
-		try {
-			AudioInputStream audioInputStream = AudioSystem
-					.getAudioInputStream(new File(nombresonido).getAbsoluteFile());
-			Clip clip = AudioSystem.getClip();
-			clip.open(audioInputStream);
-			clip.loop(reiniciaJuego);
-		} catch (UnsupportedAudioFileException | IOException | LineUnavailableException ex) {
-			System.out.println("Error al reproducir el sonido.");
-		}
-	}
+//	public static void ReproducirSonido(String nombresonido) {
+//		try {
+//			AudioInputStream audioInputStream = AudioSystem
+//					.getAudioInputStream(new File(nombresonido).getAbsoluteFile());
+//			Clip clip = AudioSystem.getClip();
+//			clip.open(audioInputStream);
+//			clip.loop(reiniciaJuego);
+//		} catch (UnsupportedAudioFileException | IOException | LineUnavailableException ex) {
+//			System.out.println("Error al reproducir el sonido.");
+//		}
+//	}
 	
 	public static void cargarSonidos() {
 		try {

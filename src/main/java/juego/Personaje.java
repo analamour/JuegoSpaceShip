@@ -67,12 +67,12 @@ public class Personaje {
 	
 	public void keyPressed(KeyEvent e) {
 		if (e.getKeyCode() == KeyEvent.VK_UP) {
-			auxiliarY = -5;
+			auxiliarY = -10;
 			inicialY += auxiliarY;
 //			moverse = true;
 		}
 		if (e.getKeyCode() == KeyEvent.VK_DOWN) {
-			auxiliarY = 5;
+			auxiliarY = 10;
 			inicialY += auxiliarY;
 		}
 	}
