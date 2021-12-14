@@ -14,17 +14,20 @@ import javax.swing.JOptionPane;
 
 public class Inicializador {
 	public static int reiniciaJuego = -1;
+	public static Audio audio;
 
 	public static void main(String[] args) {
 
-		String nombresonido = ("/JuegoSpaceShip-main/src/main/resources/sonido/FondoMusica.wav");
-		ReproducirSonido(nombresonido);
+//		String nombresonido = ("/JuegoSpaceShip-main/src/main/resources/sonido/8bits/8bit Stage8 Loop");
+//		ReproducirSonido(nombresonido);
+		cargarSonidos();
+		audio.tocarSonido("Stage7");
 		JOptionPane.showMessageDialog(null, "Comenzar a Jugar");
 		System.setProperty("sun.java2d.opengl", "true");
 		JFrame ventana = new JFrame("SpaceShip");
 		Juego miJuego = new Juego();
 		ventana.add(miJuego);
-		ventana.setSize(1300, 400);
+		ventana.setSize(1300, 700);
 		ventana.setVisible(true);
 		ventana.setResizable(false);
 		ventana.setLocationRelativeTo(null);
@@ -78,6 +81,19 @@ public class Inicializador {
 			clip.loop(reiniciaJuego);
 		} catch (UnsupportedAudioFileException | IOException | LineUnavailableException ex) {
 			System.out.println("Error al reproducir el sonido.");
+		}
+	}
+	
+	public static void cargarSonidos() {
+		try {
+			audio = new Audio();
+			audio.agregarAudio("Stage1", "sonido/8bits/8bit Stage1 Loop.wav");
+			audio.agregarAudio("Stage2", "sonido/8bits/8bit Stage2 Loop.wav");
+			audio.agregarAudio("Stage3", "sonido/8bits/8bit Stage3 Loop.wav");
+			audio.agregarAudio("Stage7", "sonido/8bits/8bit Stage7 Loop.wav");
+			audio.agregarAudio("Stage8", "sonido/8bits/8bit Stage8 Loop.wav");
+		} catch (Exception e1) {
+			throw new RuntimeException(e1);
 		}
 	}
 

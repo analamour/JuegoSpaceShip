@@ -37,7 +37,7 @@ public class Personaje {
 		}
 //		if (moverse) {
 //			if (inicialY == 270) {
-//				tocoPiso = true;
+//    			sube = true;
 //				auxiliarY = 0;
 //				inicialX = 50;
 //				baja = false;
@@ -50,7 +50,7 @@ public class Personaje {
 //			}
 
 //			if (sube) {
-//				inicialY += auxiliarY;
+//			inicialY += auxiliarY;
 //			}
 //			if (baja) {
 //				inicialY += auxiliarY;
@@ -67,12 +67,12 @@ public class Personaje {
 	
 	public void keyPressed(KeyEvent e) {
 		if (e.getKeyCode() == KeyEvent.VK_UP) {
-			auxiliarY = -3;
+			auxiliarY = -5;
 			inicialY += auxiliarY;
 //			moverse = true;
 		}
 		if (e.getKeyCode() == KeyEvent.VK_DOWN) {
-			auxiliarY = 3;
+			auxiliarY = 5;
 			inicialY += auxiliarY;
 		}
 	}

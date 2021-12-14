@@ -7,7 +7,7 @@ public class Fondo {
 
 	Juego miJuego;
 	int anchoFondo = 1300;
-	int altoFondo = 400;
+	int altoFondo = 700;
 	int xUno = 1300;
 	int yUno = 0;
 	int xDos = 0;

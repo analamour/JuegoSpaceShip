@@ -13,7 +13,6 @@ import javax.swing.JPanel;
 
 public class Juego extends JPanel {
 	private static final long serialVersionUID = 1L;
-
 	URL direccionSonidoSalto, direccionSonidoChoque;
 	AudioClip sonidoChoque, sonidoSalto;
 
@@ -26,6 +25,8 @@ public class Juego extends JPanel {
 	public static int intentosVidas = 3;
 	public static int nivel = 1;
 	public static int puntos = 0;
+	
+
 
 	public Juego() {
 		direccionSonidoChoque = this.getClass().getResource("/sonido/SonidoChoque.wav");
@@ -54,7 +55,7 @@ public class Juego extends JPanel {
 		});
 		setFocusable(true);
 	}
-
+	
 	public void mover() {
 		enemigo.mover();
 		personaje.mover();
