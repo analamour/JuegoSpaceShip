@@ -11,7 +11,7 @@ public class Personaje {
 
 	Juego miJuego;
 
-	static boolean moverse = false;
+//	static boolean moverse = false;
 	static boolean disparo= false;
 	boolean sube = false;
 	boolean baja = false;
@@ -35,28 +35,28 @@ public class Personaje {
 		if (inicialX + auxiliarX > 0 && inicialX + auxiliarX < miJuego.getWidth() - anchoPersonaje) {
 			inicialX += auxiliarX;
 		}
-		if (moverse) {
-			if (inicialY == 270) {
-				sube = true;
-				auxiliarY = -2;
-				inicialX = 50;
-				baja = false;
-			}
-			if (inicialY == 10) {
-				baja = true;
-				auxiliarY = 2;
-				auxiliarX = 0;
-				sube = false;
-			}
+//		if (moverse) {
+//			if (inicialY == 270) {
+//				tocoPiso = true;
+//				auxiliarY = 0;
+//				inicialX = 50;
+//				baja = false;
+//			}
+//			if (inicialY == 10) {
+//				baja = true;
+//				auxiliarY = 2;
+//				auxiliarX = 0;
+//				sube = false;
+//			}
 
-			if (sube) {
-				inicialY += auxiliarY;
-			}
-			if (baja) {
-				inicialY += auxiliarY;
+//			if (sube) {
+//				inicialY += auxiliarY;
+//			}
+//			if (baja) {
+//				inicialY += auxiliarY;
 
-			}
-		}
+//			}
+//		}
 	}
 
 
@@ -67,11 +67,13 @@ public class Personaje {
 	
 	public void keyPressed(KeyEvent e) {
 		if (e.getKeyCode() == KeyEvent.VK_UP) {
-			auxiliarY = -2;
-			moverse = true;
+			auxiliarY = -3;
+			inicialY += auxiliarY;
+//			moverse = true;
 		}
 		if (e.getKeyCode() == KeyEvent.VK_DOWN) {
-			auxiliarY = 2;
+			auxiliarY = 3;
+			inicialY += auxiliarY;
 		}
 	}
 	public void keyPressed1(KeyEvent e) {
