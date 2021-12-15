@@ -1,4 +1,0 @@
-INDEX VERSION 1.131+C:\Users\tayna\OneDrive\Documentos\GitHub\JuegoSpacefrog\.metadata\.plugins\org.eclipse.jdt.core
-773372685.index
-590753938.index
-1865797976.index
