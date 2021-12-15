@@ -22,7 +22,7 @@ public class Juego extends JPanel {
 
 	Personaje personaje = new Personaje(this);
 	Enemigo enemigo = new Enemigo(this);
-	Asteroide asteroide = new Asteroide(this);
+	AsteroideDiagonalAbajo asteroideDiagonalAbajo = new AsteroideDiagonalAbajo(this);
 	Fondo fondo = new Fondo(this);
 
 	public static boolean juegoFinalizado = false;
@@ -65,7 +65,7 @@ public class Juego extends JPanel {
 	public void mover() {
 		enemigo.mover();
 		personaje.mover();
-		asteroide.mover();
+		asteroideDiagonalAbajo.mover();
 		fondo.mover();
 	}
 
@@ -80,7 +80,7 @@ public class Juego extends JPanel {
 		fondo.paint(g);
 		personaje.paint(g);
 		enemigo.paint(g);
-		asteroide.paint(g);
+		asteroideDiagonalAbajo.paint(g);
 		mover();
 	}
 

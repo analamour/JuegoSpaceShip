@@ -13,7 +13,7 @@ import java.util.ArrayList;
 	import javax.swing.ImageIcon;
 
 
-	public class Asteroide  {
+	public class AsteroideDiagonalAbajo  {
 
 		Juego miJuego;
 		Area cuerpo;
@@ -23,7 +23,8 @@ import java.util.ArrayList;
 		static int inicialY = (int) Math.floor(Math.random()*(580-30+1)+30);
 		static int auxiliarX = -6;
 		int auxiliarY = 0;
-		public Asteroide(Juego miJuego) {
+
+		public AsteroideDiagonalAbajo(Juego miJuego) {
 			this.miJuego = miJuego;
 		}
 		
@@ -56,6 +57,16 @@ import java.util.ArrayList;
 					}
 				} else {
 					inicialX += auxiliarX;
+					inicialY += 3;
+					//Movimiento DIagonal Abajo del Asteroide
+					int aleatorioAlto = (int) Math.floor(Math.random()*(400-300+1)+300);
+					int aleatorioBajo = (int) Math.floor(Math.random()*(150-30+1)+30);
+					if (inicialY <= aleatorioAlto )
+						System.out.println(aleatorioAlto);
+						inicialY += 1;
+					if (inicialY >= aleatorioBajo)
+						System.out.println(aleatorioBajo);
+						inicialY -= 3;
 				}
 			}
 		}
