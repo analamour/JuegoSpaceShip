@@ -20,8 +20,8 @@ public class Fondo {
 	}
 
 	public void mover() {
-		xUno -= 2;
-		xDos -= 2;
+	xUno -= 2;
+	xDos -= 2;
 		if (xUno == 0 && xDos == -1300) {
 			xUno = 1300;
 			xDos = 0;
@@ -34,5 +34,4 @@ public class Fondo {
 		g.drawImage(imagenDeFondo.getImage(), xDos, yDos, anchoFondo, altoFondo, null);
 	}
 
-	
 }

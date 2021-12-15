@@ -21,8 +21,13 @@ public class Juego extends JPanel {
 	AudioClip sonidoChoque, sonidoSalto;
 
 	Personaje personaje = new Personaje(this);
+<<<<<<< HEAD
 	Asteroide2 enemigo = new Asteroide2(this);
 	Asteroide asteroide = new Asteroide(this);
+=======
+	Enemigo enemigo = new Enemigo(this);
+	AsteroideDiagonalAbajo asteroideDiagonalAbajo = new AsteroideDiagonalAbajo(this);
+>>>>>>> 838314b19da03a92b1d7a1126649b8e784314fe0
 	Fondo fondo = new Fondo(this);
 
 	public static boolean juegoFinalizado = false;
@@ -65,7 +70,7 @@ public class Juego extends JPanel {
 	public void mover() {
 		enemigo.mover();
 		personaje.mover();
-		asteroide.mover();
+		asteroideDiagonalAbajo.mover();
 		fondo.mover();
 	}
 
@@ -80,7 +85,7 @@ public class Juego extends JPanel {
 		fondo.paint(g);
 		personaje.paint(g);
 		enemigo.paint(g);
-		asteroide.paint(g);
+		asteroideDiagonalAbajo.paint(g);
 		mover();
 	}
 

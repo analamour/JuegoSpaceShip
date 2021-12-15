@@ -34,8 +34,8 @@ public class Asteroide2 {
 			if (Juego.puntos % 5 == 0) {
 				auxiliarX += -3;
 				// imprimo por pantalla nivel y velocidad
-				System.out.println(Juego.nivel);
-				System.out.println("Este es AuxiliarX" + auxiliarX);
+//				System.out.println(Juego.nivel);
+//				System.out.println("Este es AuxiliarX" + auxiliarX);
 				// Seteo velocidad maxima del asteroide en menos 30
 				if (auxiliarX <= -30 ) {
 					auxiliarX = -30;
