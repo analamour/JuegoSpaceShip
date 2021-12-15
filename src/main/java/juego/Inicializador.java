@@ -70,18 +70,6 @@ public class Inicializador {
 		Enemigo.inicialX = 1300;
 	}
 
-//	public static void ReproducirSonido(String nombresonido) {
-//		try {
-//			AudioInputStream audioInputStream = AudioSystem
-//					.getAudioInputStream(new File(nombresonido).getAbsoluteFile());
-//			Clip clip = AudioSystem.getClip();
-//			clip.open(audioInputStream);
-//			clip.loop(reiniciaJuego);
-//		} catch (UnsupportedAudioFileException | IOException | LineUnavailableException ex) {
-//			System.out.println("Error al reproducir el sonido.");
-//		}
-//	}
-	
 	public static void cargarSonidos() {
 		try {
 			audio = new Audio();
@@ -89,7 +77,6 @@ public class Inicializador {
 			audio.agregarAudio("Stage2", "sonido/8bits/8bit Stage3 Loop.wav");
 			audio.agregarAudio("Stage3", "sonido/8bits/8bit Stage4 Loop.wav");
 			audio.agregarAudio("Stage7", "sonido/8bits/8bit Stage7 Loop.wav");
-			audio.agregarAudio("Stage8", "sonido/8bits/8bit Stage8 Loop.wav");
 		} catch (Exception e1) {
 			throw new RuntimeException(e1);
 		}
