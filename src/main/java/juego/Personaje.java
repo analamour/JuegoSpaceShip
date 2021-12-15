@@ -48,7 +48,7 @@ public class Personaje {
 	}
 
 	public void paint(Graphics2D g) {
-		ImageIcon personaje = new ImageIcon(this.getClass().getResource("/imagenes/nave.png"));
+		ImageIcon personaje = new ImageIcon(this.getClass().getResource("/imagenes/naves_disparos/Green-01.png"));
 		g.drawImage(personaje.getImage(), inicialX, inicialY, anchoPersonaje, altoPersonaje, null);
 	}
 
