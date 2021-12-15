@@ -8,16 +8,14 @@ package juego;
 	import javax.swing.ImageIcon;
 
 
-
 	public class Asteroide {
-		//private static final String Asteroide = null;
 
 		Juego miJuego;
 		Area cuerpo;
 		int anchoAsteroide = 80;
 		int altoAsteroide = 80;
 		static int inicialX = 1300;
-		static int inicialY = 500;
+		static int inicialY = (int) Math.floor(Math.random()*(580-30+1)+30);
 		static int auxiliarX = -6;
 		public Asteroide(Juego miJuego) {
 			this.miJuego = miJuego;
@@ -27,6 +25,7 @@ package juego;
 			if (inicialX <= -100) {
 				Juego.puntos++;
 				inicialX = 1300;
+				inicialY = (int) Math.floor(Math.random()*(580-30+1)+30);
 				if (Juego.puntos == 3 | Juego.puntos == 6 | Juego.puntos == 9 | Juego.puntos == 12) {
 					auxiliarX += -1;
 					Juego.nivel++;

@@ -53,9 +53,10 @@ public class Inicializador {
 					Juego.pierdeIntentoVida = false;
 					Juego.intentosVidas--;
 					Personaje.inicialY = 270;
-//					Personaje.moverse = false;
-					Enemigo.inicialX = 1300;
+					Enemigo.inicialY = (int) Math.floor(Math.random()*(30-580+1)+30);  // Valor entre M y N, ambos incluidos.
+					Enemigo.inicialX = (int) Math.floor(Math.random()*(30-580+1)+30);  // Valor entre M y N, ambos incluidos.
 					Asteroide.inicialX = 1300;
+					Asteroide.inicialY = (int) Math.floor(Math.random()*(30-580+1)+30);  // Valor entre M y N, ambos incluidos.
 				}
 			}
 		}

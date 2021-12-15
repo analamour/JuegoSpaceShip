@@ -8,16 +8,14 @@ import java.util.ArrayList;
 import javax.swing.ImageIcon;
 
 
-
 public class Enemigo {
-	//private static final String Enemigos = null;
 
 	Juego miJuego;
 	Area cuerpo;
 	int anchoEnemigo = 70;
 	int altoEnemigo = 70;
 	static int inicialX = 1300;
-	static int inicialY = 270;
+    static int inicialY = (int) Math.floor(Math.random()*(580-30+1)+30);
 	static int auxiliarX = -4;
 	public Enemigo(Juego miJuego) {
 		this.miJuego = miJuego;
@@ -27,6 +25,7 @@ public class Enemigo {
 		if (inicialX <= -100) {
 			Juego.puntos++;
 			inicialX = 1300;
+			inicialY = (int) Math.floor(Math.random()*(580-30+1)+30);
 			if (Juego.puntos == 3 | Juego.puntos == 6 | Juego.puntos == 9 | Juego.puntos == 12) {
 				auxiliarX += -2;
 				Juego.nivel++;
