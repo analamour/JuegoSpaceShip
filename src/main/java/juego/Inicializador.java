@@ -33,7 +33,7 @@ public class Inicializador {
 
 		while (true) {
 			if (Juego.juegoFinalizado) {
-				reiniciaJuego = JOptionPane.showConfirmDialog(null, "Perdiste! ¿Volver a jugar?", "¡ Partida Perdida !",
+				reiniciaJuego = JOptionPane.showConfirmDialog(null, "Perdiste! Â¿Volver a jugar?", "Â¡ Partida Perdida !",
 						JOptionPane.YES_NO_OPTION);
 				if (reiniciaJuego == 0) {
 					reiniciaValores();
@@ -55,6 +55,7 @@ public class Inicializador {
 					Personaje.inicialY = 270;
 //					Personaje.moverse = false;
 					Enemigo.inicialX = 1300;
+					Asteroide.inicialX = 1300;
 				}
 			}
 		}
@@ -74,7 +75,6 @@ public class Inicializador {
 		try {
 			audio = new Audio();
 			audio.agregarAudio("Stage1", "sonido/8bits/8bit Stage1 Loop.wav");
-			audio.agregarAudio("Stage2", "sonido/8bits/8bit Stage3 Loop.wav");
 			audio.agregarAudio("Stage3", "sonido/8bits/8bit Stage4 Loop.wav");
 			audio.agregarAudio("Stage7", "sonido/8bits/8bit Stage7 Loop.wav");
 		} catch (Exception e1) {

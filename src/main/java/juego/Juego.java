@@ -18,6 +18,7 @@ public class Juego extends JPanel {
 
 	Personaje personaje = new Personaje(this);
 	Enemigo enemigo = new Enemigo(this);
+	Asteroide asteroide = new Asteroide(this);
 	Fondo fondo = new Fondo(this);
 
 	public static boolean juegoFinalizado = false;
@@ -59,6 +60,7 @@ public class Juego extends JPanel {
 	public void mover() {
 		enemigo.mover();
 		personaje.mover();
+		asteroide.mover();
 		fondo.mover();
 	}
 
@@ -73,6 +75,7 @@ public class Juego extends JPanel {
 		fondo.paint(g);
 		personaje.paint(g);
 		enemigo.paint(g);
+		asteroide.paint(g);
 		mover();
 	}
 
