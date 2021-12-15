@@ -6,13 +6,11 @@ import java.awt.geom.Area;
 import java.awt.geom.Ellipse2D;
 import javax.swing.ImageIcon;
 
-
 public class Personaje {
 
 	Juego miJuego;
 
-//	static boolean moverse = false;
-	static boolean disparo= false;
+	static boolean disparo = false;
 	boolean sube = false;
 	boolean baja = false;
 
@@ -35,47 +33,36 @@ public class Personaje {
 		if (inicialX + auxiliarX > 0 && inicialX + auxiliarX < miJuego.getWidth() - anchoPersonaje) {
 			inicialX += auxiliarX;
 		}
-//		if (moverse) {
-//			if (inicialY == 270) {
-//    			sube = true;
-//				auxiliarY = 0;
-//				inicialX = 50;
-//				baja = false;
-//			}
-//			if (inicialY == 10) {
-//				baja = true;
-//				auxiliarY = 2;
-//				auxiliarX = 0;
-//				sube = false;
-//			}
+		if (inicialY >= 600) {
+			inicialY += auxiliarY;
+			auxiliarY = -20;
+			inicialX = 50;
+		}
+		if (inicialY <= 20) {
+			inicialY += auxiliarY;
+			auxiliarY = 20;
+			auxiliarX = 0;
+		}
 
-//			if (sube) {
-//			inicialY += auxiliarY;
-//			}
-//			if (baja) {
-//				inicialY += auxiliarY;
-
-//			}
-//		}
+		System.out.println(inicialY);
 	}
-
 
 	public void paint(Graphics2D g) {
 		ImageIcon personaje = new ImageIcon(this.getClass().getResource("/imagenes/nave.png"));
 		g.drawImage(personaje.getImage(), inicialX, inicialY, anchoPersonaje, altoPersonaje, null);
 	}
-	
+
 	public void keyPressed(KeyEvent e) {
 		if (e.getKeyCode() == KeyEvent.VK_UP) {
 			auxiliarY = -10;
 			inicialY += auxiliarY;
-//			moverse = true;
 		}
 		if (e.getKeyCode() == KeyEvent.VK_DOWN) {
 			auxiliarY = 10;
 			inicialY += auxiliarY;
 		}
 	}
+
 	public void keyPressed1(KeyEvent e) {
 		if (e.getKeyCode() == KeyEvent.VK_SPACE) {
 			disparo = true;
@@ -88,7 +75,8 @@ public class Personaje {
 
 		return cuerpo;
 	}
-	public void disparoLaser () {
-		
+
+	public void disparoLaser() {
+
 	}
 }
