@@ -5,14 +5,6 @@ import java.util.ArrayList;
 
 
 
-public class Asteroide extends MiObjeto {
-
-	public Asteroide(int coordX, int coordY, ArrayList<Image> imgs) {
-		super(coordX, coordY, imgs);
-		this.setnImg(0);
-	}
-}
-
 	import java.awt.Graphics2D;
 	import java.awt.Rectangle;
 	import java.awt.geom.Area;
@@ -21,7 +13,7 @@ public class Asteroide extends MiObjeto {
 	import javax.swing.ImageIcon;
 
 
-	public class Asteroide {
+	public class Asteroide  {
 
 		Juego miJuego;
 		Area cuerpo;
@@ -33,6 +25,11 @@ public class Asteroide extends MiObjeto {
 		public Asteroide(Juego miJuego) {
 			this.miJuego = miJuego;
 		}
+		
+//		public Asteroide(int coordX, int coordY, ArrayList<Image> imgs) {
+//			super(coordX, coordY, imgs);
+//			this.setnImg(0);
+//		}
 
 		public void mover() {
 			if (inicialX <= -100) {

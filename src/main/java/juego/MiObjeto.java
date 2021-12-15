@@ -13,7 +13,7 @@ public class MiObjeto {
 	private int nImg;
 
 	public MiObjeto(int coordX, int coordY, ArrayList<Image> imgs) {
-		super();
+//		super();
 		this.coordX = coordX;
 		this.coordY = coordY;
 		this.imgs = imgs;

@@ -65,13 +65,13 @@ public class Enemigo {
 		return !areaInt.isEmpty();	
 	}
 
-	public void DibujarColision() {
-		for (int i=1; i<=7; i++){
-			Image image  = t.getImage(getClass().getResource("/imagenes/explosion/explosion-0"+i+".png"));
-			auxImgsExplosion.add(image);
-			
-		}
-	}
+//	public void DibujarColision() {
+//		for (int i=1; i<=7; i++){
+//			Image image  = t.getImage(getClass().getResource("/imagenes/explosion/explosion-0"+i+".png"));
+//			auxImgsExplosion.add(image);
+//			
+//		}
+//	}
 
 	public int getCoordX() {
 		// TODO Auto-generated method stub
