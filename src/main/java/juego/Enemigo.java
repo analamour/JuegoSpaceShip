@@ -30,9 +30,16 @@ public class Enemigo {
 			Juego.puntos++;
 			inicialX = 1300;
 			inicialY = (int) Math.floor(Math.random()*(580-30+1)+30);
-			if (Juego.puntos == 3 | Juego.puntos == 6 | Juego.puntos == 9 | Juego.puntos == 12) {
-				auxiliarX += -2;
-				Juego.nivel++;
+            // Si el numero de puntos es divisible por 5 se aumenta velocidad asteroides
+			if (Juego.puntos % 5 == 0) {
+				auxiliarX += -3;
+				// imprimo por pantalla nivel y velocidad
+				System.out.println(Juego.nivel);
+				System.out.println("Este es AuxiliarX" + auxiliarX);
+				// Seteo velocidad maxima del asteroide en menos 30
+				if (auxiliarX <= -30 ) {
+					auxiliarX = -30;
+				}			
 			}
 		} else {
 			if (colision()) {
@@ -49,8 +56,8 @@ public class Enemigo {
 	}
 
 	public void paint(Graphics2D g) {
-		ImageIcon entrenador = new ImageIcon(this.getClass().getResource("/imagenes/Asteroide1.png"));
-		g.drawImage(entrenador.getImage(), inicialX, inicialY, anchoEnemigo, altoEnemigo, null);
+		ImageIcon asteroid = new ImageIcon(this.getClass().getResource("/imagenes/Asteroide1.png"));
+		g.drawImage(asteroid.getImage(), inicialX, inicialY, anchoEnemigo, altoEnemigo, null);
 	}
 
 	public Area getBounds() {

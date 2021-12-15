@@ -22,6 +22,7 @@ import java.util.ArrayList;
 		static int inicialX = 1300;
 		static int inicialY = (int) Math.floor(Math.random()*(580-30+1)+30);
 		static int auxiliarX = -6;
+		int auxiliarY = 0;
 		public Asteroide(Juego miJuego) {
 			this.miJuego = miJuego;
 		}
@@ -35,10 +36,16 @@ import java.util.ArrayList;
 			if (inicialX <= -100) {
 				Juego.puntos++;
 				inicialX = 1300;
+				// Instancio asteroide en un numero aleatorio entre 30 y 580 de Y
 				inicialY = (int) Math.floor(Math.random()*(580-30+1)+30);
-				if (Juego.puntos == 3 | Juego.puntos == 6 | Juego.puntos == 9 | Juego.puntos == 12) {
-					auxiliarX += -1;
+								
+				// Si el numero de puntos es divisible por 7 sube nivel y aumenta velocidad
+				if (Juego.puntos % 7 == 0) {
+					auxiliarX += -2;
 					Juego.nivel++;
+					if (auxiliarX <= -20 ) {
+						auxiliarX = -20;
+					}
 				}
 			} else {
 				if (colision()) {
@@ -54,8 +61,8 @@ import java.util.ArrayList;
 		}
 
 		public void paint(Graphics2D g) {
-			ImageIcon entrenador = new ImageIcon(this.getClass().getResource("/imagenes/Asteroide2.png"));
-			g.drawImage(entrenador.getImage(), inicialX, inicialY, anchoAsteroide, altoAsteroide, null);
+			ImageIcon asteroid = new ImageIcon(this.getClass().getResource("/imagenes/Asteroide2.png"));
+			g.drawImage(asteroid.getImage(), inicialX, inicialY, anchoAsteroide, altoAsteroide, null);
 		}
 
 		public Area getBounds() {

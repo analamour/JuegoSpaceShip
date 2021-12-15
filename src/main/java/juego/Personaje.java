@@ -33,30 +33,36 @@ public class Personaje {
 		if (inicialX + auxiliarX > 0 && inicialX + auxiliarX < miJuego.getWidth() - anchoPersonaje) {
 			inicialX += auxiliarX;
 		}
+		// Si traspasa hacia abajo los limites de la pantalla aparece arriba
 		if (inicialY >= 600) {
 			inicialY += auxiliarY;
 			inicialY = 20;
 			inicialX = 50;
 		}
+		// Si traspasa hacia arriba los limites de la pantalla aparece abajo
 		if (inicialY <= 20) {
 			inicialY += auxiliarY;
 			auxiliarY = 590;
 			auxiliarX = 0;
 		}
 
-		System.out.println(inicialY);
+		// Guia para saber donde esta parada la nave
+//		System.out.println(inicialY);
 	}
 
+	// Instancio nave
 	public void paint(Graphics2D g) {
 		ImageIcon personaje = new ImageIcon(this.getClass().getResource("/imagenes/naves_disparos/Red-02.png"));
 		g.drawImage(personaje.getImage(), inicialX, inicialY, anchoPersonaje, altoPersonaje, null);
 	}
 
+	// Nave - Movimiento hacia arriba
 	public void keyPressed(KeyEvent e) {
 		if (e.getKeyCode() == KeyEvent.VK_UP) {
 			auxiliarY = -10;
 			inicialY += auxiliarY;
 		}
+   // Nave - Movimiento hacia abajo
 		if (e.getKeyCode() == KeyEvent.VK_DOWN) {
 			auxiliarY = 10;
 			inicialY += auxiliarY;

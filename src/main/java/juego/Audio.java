@@ -38,7 +38,7 @@ package juego;
 	            DataLine.Info info = new DataLine.Info(Clip.class, ais.getFormat());
 	            Clip clip = (Clip) AudioSystem.getLine(info);
 	            clip.open(ais);
-	            clip.loop(1);
+	            clip.loop(-1);
 	           
 	        } catch (Exception e) {
 	            e.printStackTrace();
