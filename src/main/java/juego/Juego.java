@@ -6,10 +6,14 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
+import java.awt.Image;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.net.URL;
+import java.util.ArrayList;
+
 import javax.swing.JPanel;
+
 
 public class Juego extends JPanel {
 	private static final long serialVersionUID = 1L;
@@ -25,6 +29,7 @@ public class Juego extends JPanel {
 	public static int intentosVidas = 3;
 	public static int nivel = 1;
 	public static int puntos = 0;
+	private ArrayList<Image> auxImgsAsteroide = new ArrayList<Image>();
 	
 
 
@@ -101,4 +106,8 @@ public class Juego extends JPanel {
 		pierdeIntentoVida = true;
 	}
 
+	
+
+	public ArrayList<Image> getAuxImgsAsteroide(){return auxImgsAsteroide;}
+	public void setAuxImgsAsteroide(ArrayList<Image> auxImgsAsteroide){this.auxImgsAsteroide = auxImgsAsteroide;}
 }

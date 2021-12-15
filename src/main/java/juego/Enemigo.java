@@ -1,17 +1,21 @@
 package juego;
 
+
 import java.awt.Graphics2D;
+import java.awt.Image;
 import java.awt.Rectangle;
+import java.awt.Toolkit;
 import java.awt.geom.Area;
 import java.util.ArrayList;
-
 import javax.swing.ImageIcon;
 
 
 
 public class Enemigo {
-	//private static final String Enemigos = null;
-
+	Toolkit t = Toolkit.getDefaultToolkit();
+	
+	protected ArrayList<Image> auxImgsExplosion = new ArrayList<Image>();
+	
 	Juego miJuego;
 	Area cuerpo;
 	int anchoEnemigo = 70;
@@ -23,6 +27,7 @@ public class Enemigo {
 		this.miJuego = miJuego;
 	}
 
+	
 	public void mover() {
 		if (inicialX <= -100) {
 			Juego.puntos++;
@@ -33,6 +38,7 @@ public class Enemigo {
 			}
 		} else {
 			if (colision()) {
+				
 				if (Juego.intentosVidas == 0) {
 					miJuego.finJuego();
 				} else {
@@ -52,15 +58,21 @@ public class Enemigo {
 	public Area getBounds() {
 		Rectangle cuerpoEnemigo = new Rectangle(inicialX + 12, inicialY + 16, 50, 53);
 		cuerpo = new Area(cuerpoEnemigo);
-
 		return cuerpo;
 	}
 
 	public boolean colision() {
 		Area areaInt = new Area(miJuego.personaje.getBounds());
-		areaInt.intersect(getBounds());
+		areaInt.intersect(getBounds());		
+		return !areaInt.isEmpty();	
+	}
 
-		return !areaInt.isEmpty();
+	public void DibujarColision() {
+		for (int i=1; i<=7; i++){
+			Image image  = t.getImage(getClass().getResource("/imagenes/explosion/explosion-0"+i+".png"));
+			auxImgsExplosion.add(image);
+			
+		}
 	}
 
 	public int getCoordX() {

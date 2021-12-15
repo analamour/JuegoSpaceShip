@@ -74,7 +74,7 @@ public class Inicializador {
 		try {
 			audio = new Audio();
 			audio.agregarAudio("Stage1", "sonido/8bits/8bit Stage1 Loop.wav");
-			audio.agregarAudio("Stage2", "sonido/8bits/8bit Stage3 Loop.wav");
+			audio.agregarAudio("Stage2", "sonido/8bits/8bit Stage7 Loop.wav");
 			audio.agregarAudio("Stage3", "sonido/8bits/8bit Stage4 Loop.wav");
 			audio.agregarAudio("Stage7", "sonido/8bits/8bit Stage7 Loop.wav");
 		} catch (Exception e1) {

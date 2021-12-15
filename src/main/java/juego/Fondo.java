@@ -1,6 +1,8 @@
 package juego;
 
 import java.awt.Graphics2D;
+import java.awt.Image;
+
 import javax.swing.ImageIcon;
 
 public class Fondo {
@@ -32,4 +34,5 @@ public class Fondo {
 		g.drawImage(imagenDeFondo.getImage(), xDos, yDos, anchoFondo, altoFondo, null);
 	}
 
+	
 }
