@@ -35,12 +35,12 @@ public class Personaje {
 		}
 		if (inicialY >= 600) {
 			inicialY += auxiliarY;
-			auxiliarY = -20;
+			inicialY = 20;
 			inicialX = 50;
 		}
 		if (inicialY <= 20) {
 			inicialY += auxiliarY;
-			auxiliarY = 20;
+			auxiliarY = 590;
 			auxiliarX = 0;
 		}
 

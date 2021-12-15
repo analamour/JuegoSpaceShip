@@ -18,8 +18,6 @@ public class Inicializador {
 
 	public static void main(String[] args) {
 
-//		String nombresonido = ("/JuegoSpaceShip-main/src/main/resources/sonido/8bits/8bit Stage8 Loop");
-//		ReproducirSonido(nombresonido);
 		cargarSonidos();
 		audio.tocarSonido("Stage7");
 		JOptionPane.showMessageDialog(null, "Comenzar a Jugar");
@@ -88,8 +86,8 @@ public class Inicializador {
 		try {
 			audio = new Audio();
 			audio.agregarAudio("Stage1", "sonido/8bits/8bit Stage1 Loop.wav");
-			audio.agregarAudio("Stage2", "sonido/8bits/8bit Stage2 Loop.wav");
-			audio.agregarAudio("Stage3", "sonido/8bits/8bit Stage3 Loop.wav");
+			audio.agregarAudio("Stage2", "sonido/8bits/8bit Stage3 Loop.wav");
+			audio.agregarAudio("Stage3", "sonido/8bits/8bit Stage4 Loop.wav");
 			audio.agregarAudio("Stage7", "sonido/8bits/8bit Stage7 Loop.wav");
 			audio.agregarAudio("Stage8", "sonido/8bits/8bit Stage8 Loop.wav");
 		} catch (Exception e1) {
