@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import javax.swing.ImageIcon;
 
 
-public class Enemigo {
+public class Asteroide2 {
 
 
 	Juego miJuego;
@@ -20,7 +20,7 @@ public class Enemigo {
 	static int inicialX = 1300;
     static int inicialY = (int) Math.floor(Math.random()*(580-30+1)+30);
 	static int auxiliarX = -4;
-	public Enemigo(Juego miJuego) {
+	public Asteroide2(Juego miJuego) {
 		this.miJuego = miJuego;
 	}
 

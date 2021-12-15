@@ -21,7 +21,7 @@ public class Juego extends JPanel {
 	AudioClip sonidoChoque, sonidoSalto;
 
 	Personaje personaje = new Personaje(this);
-	Enemigo enemigo = new Enemigo(this);
+	Asteroide2 enemigo = new Asteroide2(this);
 	Asteroide asteroide = new Asteroide(this);
 	Fondo fondo = new Fondo(this);
 

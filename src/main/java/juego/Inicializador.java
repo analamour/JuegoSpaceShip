@@ -53,8 +53,9 @@ public class Inicializador {
 					Juego.pierdeIntentoVida = false;
 					Juego.intentosVidas--;
 					Personaje.inicialY = 270;
-					Enemigo.inicialY = (int) Math.floor(Math.random()*(30-580+1)+30); 
-					Enemigo.inicialX = (int) Math.floor(Math.random()*(30-580+1)+30); 
+					Disparo.inicialY = 200;
+					Asteroide2.inicialY = (int) Math.floor(Math.random()*(30-580+1)+30); 
+					Asteroide2.inicialX = (int) Math.floor(Math.random()*(30-580+1)+30); 
 					Asteroide.inicialX = 1300;
 					Asteroide.inicialY = (int) Math.floor(Math.random()*(30-580+1)+30);
 				}
@@ -64,12 +65,12 @@ public class Inicializador {
 
 	public static void reiniciaValores() {
 		Juego.juegoFinalizado = false;
-		Enemigo.auxiliarX = -4;
+		Asteroide2.auxiliarX = -4;
 		Juego.puntos = 0;
 		Juego.intentosVidas = 3;
 		Juego.nivel = 1;
 		reiniciaJuego = -1;
-		Enemigo.inicialX = 1300;
+		Asteroide2.inicialX = 1300;
 	}
 
 	public static void cargarSonidos() {
