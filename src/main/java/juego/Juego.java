@@ -11,9 +11,7 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.net.URL;
 import java.util.ArrayList;
-
 import javax.swing.JPanel;
-
 
 public class Juego extends JPanel {
 	private static final long serialVersionUID = 1L;
@@ -21,7 +19,7 @@ public class Juego extends JPanel {
 	AudioClip sonidoChoque, sonidoSalto;
 
 	Personaje personaje = new Personaje(this);
-
+	Disparo disparo = new Disparo(this);
 	Asteroide2 asteroide2 = new Asteroide2(this);
 	AsteroideDiagonalAbajo asteroideDiagonalAbajo = new AsteroideDiagonalAbajo(this);
 	AsteroideDiagonalArriba asteroideDiagonalArriba = new AsteroideDiagonalArriba(this);
@@ -33,8 +31,6 @@ public class Juego extends JPanel {
 	public static int nivel = 1;
 	public static int puntos = 0;
 	private ArrayList<Image> auxImgsAsteroide = new ArrayList<Image>();
-	
-
 
 	public Juego() {
 		direccionSonidoChoque = this.getClass().getResource("/sonido/SonidoChoque.wav");
@@ -52,24 +48,27 @@ public class Juego extends JPanel {
 
 			@Override
 			public void keyPressed(KeyEvent e) {
-					sonidoSalto.play();
-					personaje.keyPressed(e);
-				}
+				sonidoSalto.play();
+				personaje.keyPressed(e);
+				disparo.keyPressed(e);
+
+			}
 
 			@Override
 			public void keyReleased(KeyEvent e) {
-					sonidoSalto.play();
+				sonidoSalto.play();
 			}
 		});
 		setFocusable(true);
 	}
-	
+
 	public void mover() {
 		asteroide2.mover();
 		personaje.mover();
 		asteroideDiagonalAbajo.mover();
 		asteroideDiagonalArriba.mover();
 		fondo.mover();
+		disparo.mover();
 	}
 
 	public void paintComponent(Graphics g) {
@@ -112,9 +111,4 @@ public class Juego extends JPanel {
 		sonidoChoque.play();
 		pierdeIntentoVida = true;
 	}
-
-	
-
-	public ArrayList<Image> getAuxImgsAsteroide(){return auxImgsAsteroide;}
-	public void setAuxImgsAsteroide(ArrayList<Image> auxImgsAsteroide){this.auxImgsAsteroide = auxImgsAsteroide;}
 }

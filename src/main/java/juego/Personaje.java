@@ -13,15 +13,11 @@ public class Personaje {
 	static boolean disparo = false;
 	boolean sube = false;
 	boolean baja = false;
-
 	Area cuerpo;
-
 	int anchoPersonaje = 112;
 	int altoPersonaje = 78;
-
 	static int inicialX = 50;
 	static int inicialY = 270;
-
 	int auxiliarX = 0;
 	int auxiliarY = 0;
 
@@ -62,7 +58,7 @@ public class Personaje {
 			auxiliarY = -10;
 			inicialY += auxiliarY;
 		}
-   // Nave - Movimiento hacia abajo
+		// Nave - Movimiento hacia abajo
 		if (e.getKeyCode() == KeyEvent.VK_DOWN) {
 			auxiliarY = 10;
 			inicialY += auxiliarY;

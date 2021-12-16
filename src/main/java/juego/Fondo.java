@@ -1,8 +1,6 @@
 package juego;
 
 import java.awt.Graphics2D;
-import java.awt.Image;
-
 import javax.swing.ImageIcon;
 
 public class Fondo {
@@ -20,8 +18,8 @@ public class Fondo {
 	}
 
 	public void mover() {
-	xUno -= 2;
-	xDos -= 2;
+		xUno -= 2;
+		xDos -= 2;
 		if (xUno == 0 && xDos == -1300) {
 			xUno = 1300;
 			xDos = 0;

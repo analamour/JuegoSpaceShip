@@ -2,11 +2,8 @@ package juego;
 
 
 import java.awt.Graphics2D;
-import java.awt.Image;
 import java.awt.Rectangle;
-import java.awt.Toolkit;
 import java.awt.geom.Area;
-import java.util.ArrayList;
 import javax.swing.ImageIcon;
 
 

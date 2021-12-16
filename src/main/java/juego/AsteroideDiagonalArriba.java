@@ -3,7 +3,6 @@ package juego;
 import java.awt.Graphics2D;
 import java.awt.Rectangle;
 import java.awt.geom.Area;
-
 import javax.swing.ImageIcon;
 
 public class AsteroideDiagonalArriba {
