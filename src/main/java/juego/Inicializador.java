@@ -53,18 +53,13 @@ public class Inicializador {
 					Juego.pierdeIntentoVida = false;
 					Juego.intentosVidas--;
 					Personaje.inicialY = 270;
-<<<<<<< HEAD
+
 					Disparo.inicialY = 200;
 					Asteroide2.inicialY = (int) Math.floor(Math.random()*(30-580+1)+30); 
 					Asteroide2.inicialX = (int) Math.floor(Math.random()*(30-580+1)+30); 
-					Asteroide.inicialX = 1300;
-					Asteroide.inicialY = (int) Math.floor(Math.random()*(30-580+1)+30);
-=======
-					Enemigo.inicialY = (int) Math.floor(Math.random()*(30-580+1)+30); 
-					Enemigo.inicialX = (int) Math.floor(Math.random()*(30-580+1)+30); 
 					AsteroideDiagonalAbajo.inicialX = 1300;
 					AsteroideDiagonalAbajo.inicialY = (int) Math.floor(Math.random()*(30-580+1)+30);
->>>>>>> 838314b19da03a92b1d7a1126649b8e784314fe0
+
 				}
 			}
 		}

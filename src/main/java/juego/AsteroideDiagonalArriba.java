@@ -1,33 +1,25 @@
 package juego;
 
-import java.awt.Image;
-import java.util.ArrayList;
+import java.awt.Graphics2D;
+import java.awt.Rectangle;
+import java.awt.geom.Area;
 
+import javax.swing.ImageIcon;
 
-
-	import java.awt.Graphics2D;
-	import java.awt.Rectangle;
-	import java.awt.geom.Area;
-	import java.util.ArrayList;
-
-	import javax.swing.ImageIcon;
-
-
-	public class AsteroideDiagonalAbajo  {
+public class AsteroideDiagonalArriba {
 
 		Juego miJuego;
 		Area cuerpo;
-		int anchoAsteroide = 100;
-		int altoAsteroide = 80;
-		static int inicialX = 200;
+		int anchoAsteroide = 70;
+		int altoAsteroide = 90;
+		static int inicialX = 1300;
 		static int inicialY = (int) Math.floor(Math.random()*(580-30+1)+30);
 		static int auxiliarX = -6;
 		int auxiliarY = 0;
 
-		public AsteroideDiagonalAbajo(Juego miJuego) {
+		public AsteroideDiagonalArriba(Juego miJuego) {
 			this.miJuego = miJuego;
 		}
-		
 
 		public void mover() {
 			if (inicialX <= -100) {
@@ -53,20 +45,20 @@ import java.util.ArrayList;
 					}
 				} else {
 					inicialX += auxiliarX;
-					inicialY += 3;
+					inicialY += 1;
 					//Movimiento DIagonal Abajo del Asteroide
 					int aleatorioAlto = (int) Math.floor(Math.random()*(400-300+1)+300);
 					int aleatorioBajo = (int) Math.floor(Math.random()*(150-30+1)+30);
-					if (inicialY <= aleatorioAlto )
+					if (inicialY >= aleatorioAlto )
 						inicialY += 1;
-					if (inicialY >= aleatorioBajo)
+					if (inicialY <= aleatorioBajo)
 						inicialY -= 3;
 				}
 			}
 		}
 
 		public void paint(Graphics2D g) {
-			ImageIcon asteroid = new ImageIcon(this.getClass().getResource("/imagenes/Asteroide2.png"));
+			ImageIcon asteroid = new ImageIcon(this.getClass().getResource("/imagenes/Asteroide3.png"));
 			g.drawImage(asteroid.getImage(), inicialX, inicialY, anchoAsteroide, altoAsteroide, null);
 		}
 
@@ -89,5 +81,4 @@ import java.util.ArrayList;
 			return 0;
 		}
 }
-
 

@@ -16,7 +16,7 @@ public class Asteroide2 {
 	Juego miJuego;
 	Area cuerpo;
 	int anchoEnemigo = 70;
-	int altoEnemigo = 70;
+	int altoEnemigo = 90;
 	static int inicialX = 1300;
     static int inicialY = (int) Math.floor(Math.random()*(580-30+1)+30);
 	static int auxiliarX = -4;
@@ -29,7 +29,7 @@ public class Asteroide2 {
 		if (inicialX <= -100) {
 			Juego.puntos++;
 			inicialX = 1300;
-			inicialY = (int) Math.floor(Math.random()*(580-30+1)+30);
+			inicialY = (int) Math.floor(Math.random()*(580-30+1)+15);
             // Si el numero de puntos es divisible por 5 se aumenta velocidad asteroides
 			if (Juego.puntos % 5 == 0) {
 				auxiliarX += -3;
@@ -39,7 +39,14 @@ public class Asteroide2 {
 				// Seteo velocidad maxima del asteroide en menos 30
 				if (auxiliarX <= -30 ) {
 					auxiliarX = -30;
-				}			
+				}	
+				if (Juego.puntos % 2 == 0) {
+					auxiliarX += -2;
+					Juego.nivel++;
+					if (auxiliarX <= -10 ) {
+						auxiliarX = -10;
+					}
+				}
 			}
 		} else {
 			if (colision()) {

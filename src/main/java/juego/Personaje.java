@@ -52,7 +52,7 @@ public class Personaje {
 
 	// Instancio nave
 	public void paint(Graphics2D g) {
-		ImageIcon personaje = new ImageIcon(this.getClass().getResource("/imagenes/naves_disparos/Red-02.png"));
+		ImageIcon personaje = new ImageIcon(this.getClass().getResource("/imagenes/nave.png"));
 		g.drawImage(personaje.getImage(), inicialX, inicialY, anchoPersonaje, altoPersonaje, null);
 	}
 
