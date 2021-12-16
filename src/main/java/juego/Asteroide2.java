@@ -39,9 +39,9 @@ public class Asteroide2 {
 				}	
 				if (Juego.puntos % 2 == 0) {
 					auxiliarX += -2;
-					Juego.nivel++;
-					if (auxiliarX <= -10 ) {
-						auxiliarX = -10;
+//					Juego.nivel++;
+					if (auxiliarX <= -12 ) {
+						auxiliarX = -12;
 					}
 				}
 			}
@@ -52,6 +52,7 @@ public class Asteroide2 {
 					miJuego.finJuego();
 				} else {
 					miJuego.pierdeIntentoVida();
+					System.out.println("COLISION Asteroide2");					
 				}
 			} else {
 				inicialX += auxiliarX;

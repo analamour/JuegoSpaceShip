@@ -41,6 +41,7 @@ public class AsteroideDiagonalAbajo {
 					miJuego.finJuego();
 				} else {
 					miJuego.pierdeIntentoVida();
+					System.out.println("COLISION AsteroideAbajo");
 				}
 			} else {
 				inicialX += auxiliarX;
