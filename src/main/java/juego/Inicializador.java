@@ -33,8 +33,8 @@ public class Inicializador {
 
 		while (true) {
 			if (Juego.juegoFinalizado) {
-				reiniciaJuego = JOptionPane.showConfirmDialog(null, "Perdiste! ¿Volver a jugar?", "¡ Partida Perdida !",
-						JOptionPane.YES_NO_OPTION);
+				reiniciaJuego = JOptionPane.showConfirmDialog(null, "             GAME OVER  \n           �Volver a jugar?",
+						null, JOptionPane.YES_NO_OPTION);
 				if (reiniciaJuego == 0) {
 					reiniciaValores();
 				} else if (reiniciaJuego == 1) {
@@ -53,12 +53,13 @@ public class Inicializador {
 					Juego.pierdeIntentoVida = false;
 					Juego.intentosVidas--;
 					Personaje.inicialY = 270;
-
 					Disparo.inicialY = 200;
 					Asteroide2.inicialY = (int) Math.floor(Math.random()*(30-580+1)+30); 
 					Asteroide2.inicialX = (int) Math.floor(Math.random()*(30-580+1)+30); 
 					AsteroideDiagonalAbajo.inicialX = 1300;
 					AsteroideDiagonalAbajo.inicialY = (int) Math.floor(Math.random()*(30-580+1)+30);
+					AsteroideDiagonalArriba.inicialX = 1300;
+					AsteroideDiagonalArriba.inicialY = (int) Math.floor(Math.random()*(30-580+1)+30);
 
 				}
 			}
