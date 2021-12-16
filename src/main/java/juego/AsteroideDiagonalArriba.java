@@ -45,7 +45,7 @@ public class AsteroideDiagonalArriba {
 					}
 				} else {
 					inicialX += auxiliarX;
-					inicialY += 1;
+					inicialY -= 1;
 					//Movimiento DIagonal Abajo del Asteroide
 					int aleatorioAlto = (int) Math.floor(Math.random()*(400-300+1)+300);
 					int aleatorioBajo = (int) Math.floor(Math.random()*(150-30+1)+30);
