@@ -19,7 +19,6 @@ public class Juego extends JPanel {
 	AudioClip sonidoChoque, sonidoSalto;
 
 	Personaje personaje = new Personaje(this);
-//	Disparo disparo = new Disparo(this);
 	Asteroide2 asteroide2 = new Asteroide2(this);
 	Asteroide2 asteroide3 = new Asteroide2(this);
 	AsteroideDiagonalAbajo asteroideDiagonalAbajo = new AsteroideDiagonalAbajo(this);
@@ -51,8 +50,6 @@ public class Juego extends JPanel {
 			public void keyPressed(KeyEvent e) {
 				sonidoSalto.play();
 				personaje.keyPressed(e);
-//				disparo.keyPressed(e);
-
 			}
 
 			@Override
@@ -69,7 +66,6 @@ public class Juego extends JPanel {
 		asteroideDiagonalAbajo.mover();
 		asteroideDiagonalArriba.mover();
 		fondo.mover();
-//		disparo.mover();
 	}
 
 	public void paintComponent(Graphics g) {
