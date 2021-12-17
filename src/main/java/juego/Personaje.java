@@ -10,9 +10,6 @@ public class Personaje {
 
 	Juego miJuego;
 
-	static boolean disparo = false;
-	boolean sube = false;
-	boolean baja = false;
 	Area cuerpo;
 	int anchoPersonaje = 112;
 	int altoPersonaje = 78;
@@ -65,12 +62,6 @@ public class Personaje {
 		}
 	}
 
-	public void keyPressed1(KeyEvent e) {
-		if (e.getKeyCode() == KeyEvent.VK_SPACE) {
-			disparo = true;
-		}
-	}
-
 	public Area getBounds() {
 		Ellipse2D cuerpoForma = new Ellipse2D.Double(inicialX + 50, inicialY + 39, 38, 38);
 		cuerpo = new Area(cuerpoForma);
@@ -78,7 +69,4 @@ public class Personaje {
 		return cuerpo;
 	}
 
-	public void disparoLaser() {
-
-	}
 }
