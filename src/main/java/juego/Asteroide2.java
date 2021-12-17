@@ -30,16 +30,14 @@ public class Asteroide2 {
             // Si el numero de puntos es divisible por 5 se aumenta velocidad asteroides
 			if (Juego.puntos % 5 == 0) {
 				auxiliarX += -3;
-				// imprimo por pantalla nivel y velocidad
-//				System.out.println(Juego.nivel);
-//				System.out.println("Este es AuxiliarX" + auxiliarX);
+
 				// Seteo velocidad maxima del asteroide en menos 30
 				if (auxiliarX <= -30 ) {
 					auxiliarX = -30;
 				}	
 				if (Juego.puntos % 2 == 0) {
 					auxiliarX += -2;
-//					Juego.nivel++;
+
 					if (auxiliarX <= -12 ) {
 						auxiliarX = -12;
 					}
@@ -77,16 +75,8 @@ public class Asteroide2 {
 		return !areaInt.isEmpty();	
 	}
 
-//	public void DibujarColision() {
-//		for (int i=1; i<=7; i++){
-//			Image image  = t.getImage(getClass().getResource("/imagenes/explosion/explosion-0"+i+".png"));
-//			auxImgsExplosion.add(image);
-//			
-//		}
-//	}
-
 	public int getCoordX() {
-		// TODO Auto-generated method stub
+		
 		return 0;
 	}
 }
