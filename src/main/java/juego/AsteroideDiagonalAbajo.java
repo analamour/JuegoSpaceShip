@@ -11,11 +11,11 @@ public class AsteroideDiagonalAbajo {
 	Area cuerpo;
 	int anchoAsteroide = 100;
 	int altoAsteroide = 80;
-	static int inicialX = 200;
+	static int inicialX = 1300;
 	static int inicialY = (int) Math.floor(Math.random() * (580 - 30 + 1) + 30);
 	static int auxiliarX = -6;
 	int auxiliarY = 0;
-
+	
 	public AsteroideDiagonalAbajo(Juego miJuego) {
 		this.miJuego = miJuego;
 	}

@@ -48,11 +48,11 @@ public class AsteroideDiagonalArriba {
 					inicialY -= 1;
 					//Movimiento Diagonal Abajo del Asteroide
 					int aleatorioAlto = (int) Math.floor(Math.random()*(400-300+1)+300);
-					int aleatorioBajo = (int) Math.floor(Math.random()*(150-30+1)+30);
+					int aleatorioBajo = (int) Math.floor(Math.random()*(200-100+1)+100);
 					if (inicialY >= aleatorioAlto )
 						inicialY += 1;
 					if (inicialY <= aleatorioBajo)
-						inicialY -= 3;
+						inicialY -= 0;
 				}
 			}
 		}

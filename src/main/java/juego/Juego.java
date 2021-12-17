@@ -15,12 +15,12 @@ import javax.swing.JPanel;
 
 public class Juego extends JPanel {
 	private static final long serialVersionUID = 1L;
-	URL direccionSonidoSalto, direccionSonidoChoque;
-	AudioClip sonidoChoque, sonidoSalto;
+	URL direccionSonidoNave, direccionSonidoChoque;
+	AudioClip sonidoChoque, sonidoNave;
 
 	Personaje personaje = new Personaje(this);
 	Asteroide2 asteroide2 = new Asteroide2(this);
-	Asteroide2 asteroide3 = new Asteroide2(this);
+	Asteroide asteroide = new Asteroide(this);
 	AsteroideDiagonalAbajo asteroideDiagonalAbajo = new AsteroideDiagonalAbajo(this);
 	AsteroideDiagonalArriba asteroideDiagonalArriba = new AsteroideDiagonalArriba(this);
 	Fondo fondo = new Fondo(this);
@@ -30,14 +30,14 @@ public class Juego extends JPanel {
 	public static int intentosVidas = 3;
 	public static int nivel = 1;
 	public static int puntos = 0;
-	private ArrayList<Image> auxImgsAsteroide = new ArrayList<Image>();
+
 
 	public Juego() {
 		direccionSonidoChoque = this.getClass().getResource("/sonido/SonidoChoque.wav");
 		sonidoChoque = Applet.newAudioClip(direccionSonidoChoque);
 
-		direccionSonidoSalto = this.getClass().getResource("/sonido/FondoMusica.wav");
-		sonidoSalto = Applet.newAudioClip(direccionSonidoSalto);
+		direccionSonidoNave = this.getClass().getResource("/sonido/FondoMusica.wav");
+		sonidoNave = Applet.newAudioClip(direccionSonidoNave);
 
 		addKeyListener(new KeyListener() {
 
@@ -48,24 +48,30 @@ public class Juego extends JPanel {
 
 			@Override
 			public void keyPressed(KeyEvent e) {
-				sonidoSalto.play();
+				sonidoNave.play();
 				personaje.keyPressed(e);
 			}
 
 			@Override
 			public void keyReleased(KeyEvent e) {
-				sonidoSalto.play();
+				sonidoNave.play();
 			}
 		});
 		setFocusable(true);
 	}
 
 	public void mover() {
-		asteroide2.mover();
+		
 		personaje.mover();
-		asteroideDiagonalAbajo.mover();
+
 		asteroideDiagonalArriba.mover();
+		asteroide2.mover();	
 		fondo.mover();
+		if (Juego.puntos >= 50)
+			asteroide.mover();
+		if (Juego.puntos >= 10)
+			asteroideDiagonalAbajo.mover();
+
 	}
 
 	public void paintComponent(Graphics g) {
@@ -79,9 +85,13 @@ public class Juego extends JPanel {
 		fondo.paint(g);
 		personaje.paint(g);
 		asteroide2.paint(g);
-		asteroideDiagonalAbajo.paint(g);
 		asteroideDiagonalArriba.paint(g);
 		mover();
+		if (Juego.puntos >= 50)
+			asteroide.paint(g);
+		if (Juego.puntos >= 10)
+			asteroideDiagonalAbajo.paint(g);
+
 	}
 
 	public void dibujarPuntaje(Graphics2D g) {

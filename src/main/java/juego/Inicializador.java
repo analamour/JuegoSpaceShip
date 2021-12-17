@@ -25,7 +25,7 @@ public class Inicializador {
 		while (true) {
 			if (Juego.juegoFinalizado) {
 				reiniciaJuego = JOptionPane.showConfirmDialog(null,
-						"             GAME OVER  \n           ï¿½Volver a jugar?", null, JOptionPane.YES_NO_OPTION);
+						"             GAME OVER  \n           ¿Volver a jugar?", null, JOptionPane.YES_NO_OPTION);
 				if (reiniciaJuego == 0) {
 					reiniciaValores();
 				} else if (reiniciaJuego == 1) {
@@ -44,10 +44,17 @@ public class Inicializador {
 					Juego.pierdeIntentoVida = false;
 					Juego.intentosVidas--;
 					Personaje.inicialY = 270;
+
 					Asteroide2.inicialY = (int) Math.floor(Math.random() * (30 - 580 + 1) + 30);
 					Asteroide2.inicialX = (int) Math.floor(Math.random() * (30 - 580 + 1) + 30);
+					if (Juego.puntos>= 50) {
+					Asteroide.inicialY = (int) Math.floor(Math.random() * (30 - 580 + 1) + 30);
+					Asteroide.inicialX = (int) Math.floor(Math.random() * (30 - 580 + 1) + 30);
+					}
+					if (Juego.puntos>= 10) {
 					AsteroideDiagonalAbajo.inicialX = 1300;
 					AsteroideDiagonalAbajo.inicialY = (int) Math.floor(Math.random() * (30 - 580 + 1) + 30);
+					}
 					AsteroideDiagonalArriba.inicialX = 1300;
 					AsteroideDiagonalArriba.inicialY = (int) Math.floor(Math.random() * (30 - 580 + 1) + 30);
 
@@ -59,11 +66,16 @@ public class Inicializador {
 	public static void reiniciaValores() {
 		Juego.juegoFinalizado = false;
 		Asteroide2.auxiliarX = -4;
+		AsteroideDiagonalAbajo.auxiliarX = -4;
+		AsteroideDiagonalArriba.auxiliarX = -4;
 		Juego.puntos = 0;
 		Juego.intentosVidas = 3;
 		Juego.nivel = 1;
 		reiniciaJuego = -1;
 		Asteroide2.inicialX = 1300;
+		AsteroideDiagonalAbajo.inicialX = 1300;
+		AsteroideDiagonalArriba.inicialX = 1300;
+		
 	}
 
 	public static void cargarSonidos() {
